@@ -17,7 +17,7 @@ PROJECT_NAME := all-i-want-ui
 -include node_modules/beaker/make/karma-targets.mk
 -include node_modules/beaker/make/e2e-targets.mk
 
-.PHONY: install clean test coverage report-coverage release ghp-update
+.PHONY: install clean test coverage release ghp-update
 
 # NOTE: install target will not have loaded the include above
 # from beaker, so you don't have the ENV or SHELL variables set
@@ -30,7 +30,7 @@ install:
 clean:
 	$(HIDE)rm -rf bundle coverage
 
-ci-test: lint karma-test karma-coverage report-coverage
+ci-test: lint karma-test karma-coverage karma-coveralls
 
 test: karma-test
 
@@ -39,12 +39,7 @@ coverage: karma-coverage
 karma-coveralls:
 	$(ENV)cat coverage/lcov.info | coveralls
 
-report-coverage: karma-coveralls
-
-report-coverage:
-	$(HIDE)echo "Reporting Coverage not implemented yet"
-
-release: build-mock
+release: build
 	$(HIDE)echo "Publishing version $(VERSION)"
 	$(HIDE)npm publish .
 
