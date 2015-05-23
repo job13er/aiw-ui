@@ -44,7 +44,7 @@ report-coverage: karma-coveralls
 report-coverage:
 	$(HIDE)echo "Reporting Coverage not implemented yet"
 
-release: build-mock
+release: build
 	$(HIDE)echo "Publishing version $(VERSION)"
 	$(HIDE)npm publish .
 
