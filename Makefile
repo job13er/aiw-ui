@@ -30,9 +30,16 @@ install:
 clean:
 	$(HIDE)rm -rf bundle coverage
 
+ci-test: lint karma-test karma-coverage report-coverage
+
 test: karma-test
 
 coverage: karma-coverage
+
+karma-coveralls:
+	$(ENV)cat coverage/lcov.info | coveralls
+
+report-coverage: karma-coveralls
 
 report-coverage:
 	$(HIDE)echo "Reporting Coverage not implemented yet"
