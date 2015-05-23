@@ -15,6 +15,9 @@ module.exports = function (grunt) {
     // If you want to override part of the grunt config, you can do so by uncommenting/editing below
     // grunt.config.data.eslint.options.config = '.custom-eslintrc';
 
+    // add lcov reporter for coveralls
+    grunt.config.data.karma.coverage.coverageReporter.reporters.push({type: 'lcov'});
+
     // You can also add custom grunt tasks here if you want
     /*
     grunt.registerTask('say hi', 'says hi', function () {
