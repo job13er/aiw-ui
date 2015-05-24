@@ -48,4 +48,4 @@ release: build
 	$(HIDE)echo "Publishing version $(VERSION)"
 	$(HIDE)npm publish .
 
-ghp-update: build-mock ghp-clean ghp-checkout ghp-copy-app ghp-publish
+ghp-update: build-mock ghp-clean ghp-checkout $(GHP_COPY_APP) ghp-publish
