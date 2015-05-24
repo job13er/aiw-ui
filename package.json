@@ -1,10 +1,10 @@
 {
-    "name": "all-i-want-ui",
-    "version": "0.0.2",
+    "name": "aiw-ui",
+    "version": "0.0.1",
     "description":"User interface for the all-i-want app",
     "homepage": "https://all-i-want.appspot.com",
     "bugs": {
-        "url": "https://github.com/jobsquad/all-i-want-ui/issues"
+        "url": "https://github.com/jobsquad/aiw-ui/issues"
     },
     "license": "MIT",
     "author": {
@@ -14,7 +14,7 @@
     "main": "src/index.6.js",
     "repository": {
         "type": "git",
-        "url": "git@github.com:jobsquad/all-i-want-ui.git"
+        "url": "git@github.com:jobsquad/aiw-ui.git"
     },
     "scripts": {
         "test": "make ci-test"
