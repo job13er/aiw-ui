@@ -1,5 +1,5 @@
 /**
- * Spec for {@link all-i-want-ui} module
+ * @author Adam Meadows <adam.meadows@gmail.com>
  * @copyright 2015 Adam Meadows. All rights reserved.
  */
 
@@ -8,7 +8,7 @@
 /* eslint-disable max-nested-callbacks */
 
 let $ = require('jquery');
-let main = require('all-i-want-ui');
+let main = require('aiw-ui');
 
 describe('main', () => {
     let $container;

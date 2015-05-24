@@ -4,8 +4,13 @@
 #
 
 GITHUB_HOST := github.com
-REPO := jobsquad/all-i-want-ui
-PROJECT_NAME := all-i-want-ui
+REPO := jobsquad/aiw-ui
+PROJECT_NAME := aiw-ui
+
+GHP_COPY_APP := \
+	bundle.ghp-copy \
+	package.json.ghp-copy \
+	index.html.ghp-copy
 
 # Uncomment these if you want to override the default Selenium configs
 #SELENIUM_HOST ?= localhost
