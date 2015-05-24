@@ -4,8 +4,8 @@
 #
 
 GITHUB_HOST := github.com
-REPO := jobsquad/all-i-want-ui
-PROJECT_NAME := all-i-want-ui
+REPO := jobsquad/aiw-ui
+PROJECT_NAME := aiw-ui
 
 GHP_COPY_APP := \
 	bundle.ghp-copy \
