@@ -2,7 +2,6 @@
 node_modules
 
 # Generated Directories
-bundle
 coverage
 
 # Generated Files
