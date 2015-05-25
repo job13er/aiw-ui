@@ -6,18 +6,23 @@
 'use strict';
 
 require('./style/main.less');
+const template = require('./tmpl/main.jade');
+const $ = require('jquery');
+const users = require('aiw-api').users();
 
-let template = require('./tmpl/main.jade');
-let $ = require('jquery');
-
-let ns = {
+const ns = {
     render: function (element) {
-        $(element).append(template({
-            content: 'This is my first webpack project!',
-        }));
+        users.current().then(
+            res => {
+                $(element).append(template({
+                    content: JSON.stringify(res.body, null, 4),
+                }));
+            }
+        ).done();
     },
 };
 
+window.users = users;
 window.main = ns;
 
 module.exports = ns;

@@ -48,4 +48,10 @@ release: build
 	$(HIDE)echo "Publishing version $(VERSION)"
 	$(HIDE)npm publish .
 
-ghp-update: build-mock ghp-clean ghp-checkout $(GHP_COPY_APP) ghp-publish
+build-dev:
+	$(ENV)MOCK_APIS=1 grunt webpack:build-dev
+
+build-dev-admin:
+	$(ENV)MOCK_APIS=1 MOCK_ADMIN=1 grunt webpack:build-dev
+
+ghp-update: build-dev ghp-clean ghp-checkout $(GHP_COPY_APP) ghp-publish

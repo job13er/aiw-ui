@@ -20,9 +20,10 @@
         "test": "make ci-test"
     },
     "devDependencies": {
-        "beaker": "^3.5.2"
+        "beaker": "^3.5.3"
     },
     "dependencies": {
+        "aiw-api": "^0.0.1",
         "jquery": "^2.1.3",
         "lodash": "^3.2.0"
     },

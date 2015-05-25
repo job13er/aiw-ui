@@ -7,6 +7,7 @@
 
 var loaders = require('beaker/config/webpack/loaders');
 var resolve = require('beaker/config/webpack/resolve');
+var webpack = require('webpack');
 
 module.exports = {
     entry: {
@@ -22,7 +23,14 @@ module.exports = {
         pathinfo: true,
     },
 
-    plugins: [],
+    plugins: [
+        new webpack.DefinePlugin({
+            'process.env': {
+                'MOCK_APIS': process.env.MOCK_APIS,
+                'MOCK_ADMIN': process.env.MOCK_ADMIN,
+            },
+        }),
+    ],
 
     module: {
         loaders: loaders,
